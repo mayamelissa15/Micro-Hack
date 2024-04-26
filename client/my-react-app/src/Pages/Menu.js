@@ -1,5 +1,8 @@
 import Sidebar from "../Components/Sidebar";
 import Task from "../Components/TaskProgress";
+import React, { useState } from 'react'
+import '../styles/Menu.css'
+import Cerclepercent from "../Components/Cerclepercent";
 
 import add from '../Assets/Add.png'
 import SearchBar from "../Components/SearchBar";
@@ -8,9 +11,18 @@ import TaskComplete from "../Components/TaskComplete";
 import TaskToDo from "../Components/TaskToDo";
 import Navbar from "../Components/Navbar";
 const Menu = () => {
+  
+    const [day,setday]=useState(0)
+    const [hour,sethour]=useState(0)
+    const [minutes,setminutes]=useState(0)
+    const [seconds,setseconds]=useState(0)
+    const [tasksdone,settasksdone]=useState(0)
+    const [tasksleft,settasksleft]=useState(0)
+    const [description,setdescription]=useState('')
+    
     return (
-       <div className="bg-slate-50">
-         <div className=" flex flex-row ">
+    <div className="bg-slate-50">
+    <div className=" flex flex-row ">
 
 <div className="basis-1/4">
     <Sidebar  />
@@ -18,6 +30,28 @@ const Menu = () => {
 <div className="basis-3/4 w-full h-full ">
 
 <Navbar></Navbar>
+<div className='top'>
+            <Cerclepercent />
+            <div className='deux'>
+                <div className='time'>
+                    <p>{day} Days  :</p>
+                    <p>{hour} H  :</p>
+                    <p>{minutes} Min  :</p>
+                    <p>{seconds} S</p>
+                </div>
+                <div className='statics'>
+                    <p>Total tasks Done: <span>{tasksdone} tasks done</span></p>
+                    <p>Total tasks Left: <span>{tasksleft} tasks left</span></p>
+                </div>
+                
+            </div>
+            <div className='description'>
+                <h2>Project description:</h2>
+                <p>{description}</p>
+            </div>
+            
+
+        </div>
 </div>
 
 <div>
