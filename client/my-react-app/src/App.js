@@ -2,7 +2,8 @@
 import TestComponent from "./Components/TestComponent";
 import Task from "./Components/Task";
 import SearchBar from "./Components/SearchBar";
-
+import Login from "./Pages/Login"
+import Sidebar from "./Components/Sidebar";
 function App() {
   return (
     <div className="App">
@@ -16,8 +17,8 @@ function App() {
 />
 <Task title="Maya" description="Melissa"></Task>
 <SearchBar></SearchBar>
- 
-    
+ <Login></Login>
+    <Sidebar></Sidebar>
     </div>
   );
 }
