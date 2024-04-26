@@ -20,7 +20,7 @@ const TestComponent = ({ title, content, onClose }) => {
 
     return (
         <div>
-            <Button class="m-2 p-2 px-4 text-md border-1 text-slate-400 shadow-md rounded-md" onClick={handleOpen}>Open</Button>
+            <Button class="m-2 p-2 px-4 text-md font-medium border-1 text-slate-600 shadow-md rounded-md" onClick={handleOpen}>Add a task</Button>
             <Dialog open={open} onClose={handleClose}>
                 <DialogTitle>{title}</DialogTitle>
                 <DialogContent>
