@@ -6,7 +6,7 @@ const SearchBar = () => {
             <input
                 type="text"
                 placeholder="Search..."
-                className="w-full py-2 px-4 pr-12  shadow-md  rounded-2xl outline-none"
+                className="w-full py-1 px-8 w-64 pr-12  shadow-xs  rounded-2xl outline-none"
             />
             <svg
                 xmlns="http://www.w3.org/2000/svg"

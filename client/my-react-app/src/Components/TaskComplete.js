@@ -16,7 +16,7 @@ const TaskComplete = ({ title, description ,color }) => {
     };
 
     return (  
-        <div className="flex justify-center items-center h-full">
+        <div className=" flex justify-center items-center h-full">
             <div className="w-64 h-64 bg-white rounded-lg shadow-md p-4">
                 <div className="flex justify-between ">
                 <button
@@ -40,10 +40,9 @@ const TaskComplete = ({ title, description ,color }) => {
                     <h2 className="text-xl font-bold text-black">{title}</h2>
                     <p className="text-sm font-normal text-gray-600">{description}</p>
                 </div>
-                <div className="flex justify-between">
-    
-    <h1 className="text-md font-medium text-Black ">To do</h1>
-    <p className="text-sm text-slate-600">See all </p>
+                <div className="mt-16 flex justify-between">
+    <h1 className="text-md font-medium text-Black ">Team</h1>
+    <p className="text-sm text-slate-600">16h00</p>
 </div>
             </div>
             

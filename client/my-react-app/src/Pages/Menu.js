@@ -16,6 +16,7 @@ const Menu = () => {
     <Sidebar  />
 </div>
 <div className="basis-3/4 w-full h-full ">
+
 <nav className="flex items-center justify-between gap-14 my-4">
 <div className="flex gap-4">
 <img src={MenuPic} alt="Menu" className="w-4 h-4 m-2" />
@@ -32,6 +33,7 @@ className="w-8 h-8 rounded-full ml-2"
 </div>
 </nav>
 </div>
+
 <div>
     
 </div>
@@ -42,7 +44,7 @@ className="w-8 h-8 rounded-full ml-2"
 <div className="m-4 bg-white  rounded m-4 my-8 flex flex-col gap-4">
 <div className="flex justify-between">
         <h1 className="text-md font-medium text-Black ">on progress</h1>
-        <p className="text-sm text-slate-600 underline-offset-1">See all </p>
+        <p className="text-sm text-slate-600 underline-2">See all </p>
     </div>
   <Task
     title="Create fondation color"
