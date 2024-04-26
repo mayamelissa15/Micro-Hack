@@ -5,8 +5,8 @@ const Navbar = () => {
     return (<div>
         <div className="flex items-center justify-between gap-14 my-4">
 <div className="flex gap-4">
-<img src={MenuPic} alt="Menu" className="w-4 h-4 m-2" />
-<h2 className="text-lg font-medium">OctoTask Project</h2>
+<img src={MenuPic} alt="Menu" className="w-4 h-4 m-2 mx-4" />
+<h2 className="text-lg font-medium">Your Project</h2>
 </div>
 <SearchBar />
 <div className="flex items-center mx-4">
@@ -14,7 +14,7 @@ const Navbar = () => {
 <img
 src={pic}
 alt="Profile Picture"
-className="w-8 h-8 rounded-full ml-2"
+className="w-8 h-8 rounded-full ml-4"
 />
 </div>
 </div>
