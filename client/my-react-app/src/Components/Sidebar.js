@@ -5,7 +5,7 @@ import Settings from '../Assets/settings.png';
 import padlock from '../Assets/padlock.png';
 const Sidebar = () => {
   return (
-    <div className="fixed left-0 top-0 h-full w-64  bg-slate-50 text-black flex flex-col justify-between rounded-3xl">
+    <div className="fixed left-0 top-0 h-full w-64  bg-white text-black flex flex-col justify-between rounded-3xl">
       <div className="py-4 px-6">
         <ul className="m-2 p-4">
         <li className=" cursor-pointer  flex items-center justify-around rounded transition-colors duration-300 bg-[#AA8CFF] text-white font-normal text-md text-center rounded-xl p-2">

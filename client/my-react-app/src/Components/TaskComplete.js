@@ -1,11 +1,10 @@
 import React from 'react';
-import ButtonTask from "./ButtonTask";
 import point from "../Assets/points.png";
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 
-const Task = ({ title, description }) => {
+const TaskComplete = ({ title, description ,color }) => {
     const [anchorEl, setAnchorEl] = React.useState(null);
 
     const handleClick = (event) => {
@@ -20,7 +19,10 @@ const Task = ({ title, description }) => {
         <div className="flex justify-center items-center h-full">
             <div className="w-64 bg-white rounded-lg shadow-md p-4">
                 <div className="flex justify-between ">
-                    <ButtonTask>In progress</ButtonTask>
+                <button
+        className={`bg-green-100 text-xs text-green-500 font-semibold p-1 px-4 rounded-xl`}
+      > Completed
+      </button>
                     <Button onClick={handleClick} className="focus:outline-none">
                         <img src={point} alt="Task Image" className="m-2" />
                     </Button>
@@ -43,4 +45,4 @@ const Task = ({ title, description }) => {
     );
 }
 
-export default Task;
+export default TaskComplete;
