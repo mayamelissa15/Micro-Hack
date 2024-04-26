@@ -1,6 +1,7 @@
 import Team from "./Team";
 import plus from "../Assets/Plus.png"
 import Navbar from "./Navbar";
+import TestComponent from "./TestComponent";
 const Tableau = () => {
     return (
     
@@ -9,8 +10,7 @@ const Tableau = () => {
         
         <div className=' flex justify-between gap-12 m-8 '>
             <h2 className='text-medium text-3xl text-black font-medium '>Teams List</h2>
-            <img src={plus} className="ml-4 h-6 w-6  cursor-pointer" ></img>
-            
+            <TestComponent></TestComponent>
             
         </div>
         <div className="grid grid-cols-2">

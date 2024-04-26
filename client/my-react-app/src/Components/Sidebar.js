@@ -13,8 +13,8 @@ const Sidebar = () => {
         <ul className="m-2 p-4">
           {/* Ajouter les liens ici */}
           <li className="cursor-pointer flex items-center justify-around rounded transition-colors duration-300 bg-[#AA8CFF] text-white font-normal text-md text-center text-white rounded-xl p-2">
-            <img src={add} className="justify-around" alt="Add" /> 
-            <Link to="/new-project">New Project</Link> {/* Lien vers la page New Project */}
+            <button><img src={add} className="justify-around" alt="Add" /></button>
+            <Link to="/Add">New Project</Link> {/* Lien vers la page New Project */}
           </li>
 
           <li className="mt-4 text-center text-slate-700 text-sm font-medium px-4 py-2 hover:bg-gray-200 cursor-pointer rounded-xl duration-500 flex items-center">
