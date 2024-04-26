@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import SignIn from '../Components/SignIn';
 import SignUp from '../Components/SignUp';
+import backgroundImage from '../Assets/background.png'; 
 
 const App = () => {
   const [isSignUp, setIsSignUp] = useState(true);
@@ -14,13 +15,19 @@ const App = () => {
   };
 
   return (
-    <div className="flex h-screen bg-gray-100">
+    <div
+      className="flex h-screen"
+      style={{
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    >
       <div className="w-full md:w-1/2 flex justify-center items-center">
         <div className="max-w-md mx-auto px-6 py-12">
           {isSignUp ? <SignUp showSignIn={showSignIn} /> : <SignIn showSignUp={showSignUp} />}
         </div>
       </div>
-      <div className="hidden md:block w-1/2 bg-cover" style={{ backgroundImage: "url('https://source.unsplash.com/1600x900/?nature')"}}></div>
     </div>
   );
 };
