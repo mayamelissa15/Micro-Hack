@@ -4,6 +4,8 @@ import Login from './Pages/Login'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Dashboard from './Pages/Dashboard';
 import TeamLists from './Pages/TeamLists';
+import User from './Components/User';
+import UserMenu from './Pages/UserMenu';
 
 function App() {
   return (
@@ -15,6 +17,7 @@ function App() {
           <Route path="/Login" element={<Login />} />
           <Route path="/Dashboard" element={<Dashboard />} />
           <Route path="/Team-List" element={<TeamLists/>} />
+          <Route path="/UserMenu" element={<UserMenu/>}></Route>
         </Routes>
       </div>
     </Router>

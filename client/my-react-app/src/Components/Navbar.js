@@ -10,7 +10,10 @@ const Navbar = () => {
 </div>
 <SearchBar />
 <div className="flex items-center mx-4">
+<div className='grid grid-rows-2'>
 <h1 className="text-md font-medium text-slate-800">username</h1>
+<p className='text-sm font-normal text-slate-400'>User</p>
+</div>
 <img
 src={pic}
 alt="Profile Picture"
