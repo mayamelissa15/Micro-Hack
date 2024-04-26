@@ -1,6 +1,7 @@
 // Dashboard.js
 import React from "react";
 import Sidebar from "../Components/Sidebar";
+import Navbar from "../Components/Navbar";
 
 const Dashboard = () => {
   return (
@@ -12,9 +13,9 @@ const Dashboard = () => {
 
       {/* Tableau de bord */}
       <div className="basis-3/4 container ml-64  px-4 py-8">
-        <h2 className="text-2xl font-bold mb-4">Dashboard</h2>
+        <Navbar></Navbar>
 
-        <table className="w-full bg-white shadow-md rounded-lg overflow-hidden">
+        <table className="mt-8 w-full bg-white shadow-md rounded-lg overflow-hidden">
           <thead className="">
             <tr>
               <th className="text-md text-slate-700 py-4 px-3 text-left">ID</th>
