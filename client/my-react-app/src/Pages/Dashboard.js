@@ -1,32 +1,31 @@
 // Dashboard.js
-import React ,{useState} from "react";
+import React , { useState, useEffect }  from "react";
 import Sidebar from "../Components/Sidebar";
 import Navbar from "../Components/Navbar";
 import {  useNavigate  } from 'react-router-dom';
 import Cerclepercent from "../Components/Cerclepercent";
 import '../styles/Dashboard.css'
-
+import axios from 'axios'
+import Optimise from "../Components/Optmise";
 
 const Dashboard = () => {
   const navigate = useNavigate();
   const handleProjectClick = (id) => {
     navigate(`/Project/${id}`);
   };
-  const data = [
-    {
-      id: 1,
-      projectName: "Project 1",
-      dateOfCreation: "2024-04-26",
-      executionTime: "5s"
-    },
-    {
-      id: 2,
-      projectName: "Project 2",
-      dateOfCreation: "2024-04-25",
-      executionTime: "10s"
-    },
+  const[data,setdata] =useState ([])
     
-  ];
+  useEffect(()=>{
+    axios.get('http://localhost:5000/get_projects',{withCredentials:true})
+    .then((response)=>{
+        setdata(response.data)
+        console.log(data)
+    }).catch((err)=>{
+        console.log(err)
+        console.log(err.date)
+    })
+
+}, [])
   const [total,settotal]=useState(0)
   const [inprog,setinprog]=useState(0)
   const [completed,setcompleted]=useState(0)
@@ -55,10 +54,10 @@ const Dashboard = () => {
                   {data.map((item, index) => (
             <tr key={index}>
               <td className="py-2 px-3">{item.id}</td>
-              <td className="py-2 px-3" onClick={() => handleProjectClick(item.id)}>{item.projectName}</td>
-              <td className="py-2 px-3">{item.dateOfCreation}</td>
+              <td className="py-2 px-3" onClick={() => handleProjectClick(item.id)}>{item.project_name}</td>
+              <td className="py-2 px-3">{item.creation_date}</td>
               <td className="py-2 px-3">
-                <button className="bg-green-100 text-green-500 text-md font-medium rounded-2xl py-1 px-4">{item.executionTime}</button>
+                <button className="bg-green-100 text-green-500 text-md font-medium rounded-2xl py-1 px-4"><Optimise content={item.id}></Optimise></button>
               </td>
               <td className="py-2 px-3">
                 {/* Ajoutez les actions en fonction de vos besoins */}

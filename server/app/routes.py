@@ -91,9 +91,11 @@ def optimize_project_schedule(project_id):
 @auth_bp.route('/get_projects', methods=['GET'])
 def get_projects():
     projects = Project.query.all()
+    print('hh')
     project_list = []
     for project in projects:
-        project_list.append({'id': project.id, 'project_name': project.project_name, 'description': project.description})
+        project_list.append({'id': project.id, 'project_name': project.project_name, 'creation_date': project.creation_date})
+    print(project_list)
     return jsonify(project_list)
 
 @auth_bp.route('/get_project/<project_id>', methods=['POST'])
