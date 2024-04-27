@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 
-const TaskComplete = ({ title, description ,color }) => {
+const TaskComplete = ({ title, description, status, time, team }) => {
     const [anchorEl, setAnchorEl] = React.useState(null);
 
     const handleClick = (event) => {
@@ -41,8 +41,8 @@ const TaskComplete = ({ title, description ,color }) => {
                     <p className="text-sm font-normal text-gray-600">{description}</p>
                 </div>
                 <div className="mt-16 flex justify-between">
-    <h1 className="text-md font-medium text-Black ">Team</h1>
-    <p className="text-sm text-slate-600">16h00</p>
+    <h1 className="text-md font-medium text-Black ">{team}</h1>
+    <p className="text-sm text-slate-600">{time}</p>
 </div>
             </div>
             
