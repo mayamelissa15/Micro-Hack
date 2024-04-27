@@ -45,7 +45,7 @@ const AddingTask = ({ title, content, onClose }) => {
                         <label className="text-sm" for="taskTitle">Task Title:</label>
                         <input
                             id="taskTitle"
-                       py-2      class="focus:border-none shadow-md  px-6   w-96"
+                        py-2      class="focus:border-none shadow-md  px-6   w-96"
                             type="text"
                             
                             value={taskTitle}
@@ -56,7 +56,7 @@ const AddingTask = ({ title, content, onClose }) => {
                             id="taskDate"
                             class="focus:border-none shadow-md  px-6 py-2 text-slate-900 font-medium  w-96"
                             type="date"
-                           
+                            
                             value={taskDate}
                             onChange={(e) => setTaskDate(e.target.value)}
                         />
