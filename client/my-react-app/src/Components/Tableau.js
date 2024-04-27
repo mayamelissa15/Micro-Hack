@@ -15,18 +15,18 @@ const Tableau = () => {
         </div>
         <div className="grid grid-cols-2">
         <div >
-        <div className="flex justify-around gap-2 w-96 ">
+        <div className="lg:flex lg:justify-around gap-2 lg:w-96 ">
             <h1 className="mr-8 text-green-500 text-xl font-medium "> Available</h1>
-            <p className="mx-12 py-1 font-medium text-black text-sm underline underline-offset-1">See all</p>
+            <p className="lg:mx-12 py-1 font-medium text-black text-sm underline underline-offset-1">See all</p>
         </div> 
              <Team></Team>
              <Team></Team>
             
         </div>
         <div >
-        <div className="flex justify-around gap-2 w-96 ">
+        <div className="lg:flex lg:justify-around gap-2 lg:w-96 ">
             <h1 className="mr-8 text-red-500 text-xl font-medium "> Busy </h1>
-            <p className="mx-12 py-1 font-medium text-black text-sm underline underline-offset-1">See all</p>
+            <p className="lg:mx-12 py-1 font-medium text-black text-sm underline underline-offset-1">See all</p>
         </div> 
              <Team></Team>
              <Team></Team>

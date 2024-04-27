@@ -6,14 +6,14 @@ import AddingTask from "../Components/AddingTask";
 
 const AddProject = () => {
     return (
-        <div className="bg-slate-50 flex flex-row">
+        <div className="flex flex-row">
             <div className="basis-1/3">
                 <Sidebar />
             </div>
             <div className="bg-white rounded-lg mt-16 p-16 shadow-md">
                 <form className="basis-2/3">
                     <div className="mb-4">
-                        <label className="block text-slate-800 text-sm font-medium mb-2" htmlFor="field1">
+                        <label className="block text-slate-00 text-sm font-medium mb-2" htmlFor="field1">
                             Name of project
                         </label>
                         <input
@@ -24,7 +24,7 @@ const AddProject = () => {
                     </div>
                     <div className="mb-4 flex">
                         <div className="mr-2 w-1/2">
-                            <label className="block text-slate-800 text-sm font-medium mb-2" htmlFor="field2">
+                            <label className="block text-slate-00 text-sm font-medium mb-2" htmlFor="field2">
                                 Start date
                             </label>
                             <input
@@ -35,7 +35,7 @@ const AddProject = () => {
                             />
                         </div>
                         <div className="ml-2 w-1/2">
-                            <label className="block text-slate-800 text-sm font-medium mb-2" htmlFor="field3">
+                            <label className="block text-slate-00 text-sm font-medium mb-2" htmlFor="field3">
                                 End Date
                             </label>
                             <input
@@ -47,7 +47,7 @@ const AddProject = () => {
                         </div>
                     </div>
                     <div className="mb-4">
-                        <label className="block text-slate-800 text-sm font-medium mb-2" htmlFor="description">
+                        <label className="block text-slate-00 text-sm font-medium mb-2" htmlFor="description">
                             task Description
                         </label>
                         <textarea
@@ -67,4 +67,3 @@ const AddProject = () => {
 }
 
 export default AddProject;
-

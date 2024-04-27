@@ -16,9 +16,9 @@ const Team = ({ title, description ,color }) => {
     };
 
     return (  
-        <div className=" flex justify-center items-center my-6">
-            <div className="w-96 m-4 bg-white rounded-lg shadow-md p-4">
-                <div className="flex justify-between ">
+        <div className=" lg:flex lg:justify-center lg:items-center lg:my-6 ">
+            <div className="w-16 lg:w-96 lg:m-4 bg-white rounded-lg shadow-md lg:p-4">
+                <div className="flex  lg:flex lg:justify-between ">
                 <h1 className="text-xl font-bold text-black">Team Name</h1>
                     <Button onClick={handleClick} className="focus:outline-none">
                         <img src={point} alt="Task Image" className="m-2" />

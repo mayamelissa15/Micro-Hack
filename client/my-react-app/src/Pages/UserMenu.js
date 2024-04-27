@@ -5,11 +5,11 @@ import TaskUser from "../Components/TaskUser";
 
 const UserMenu = () => {
     return (
-        <div className="bg-[#F6F5FB] flex basis ">
-        <div className="basis-2/12">
+        <div className="bg-[#F6F5FB] lg:flex lg:basis ">
+        <div className="lg:basis-2/12">
             <Sidebar></Sidebar>
         </div>
-        <div className="basis-8/12 bg-slate-50">
+        <div className="lg:basis-8/12 bg-slate-50">
             <div className="pl-8 m-16">
                
             <Tasks></Tasks>

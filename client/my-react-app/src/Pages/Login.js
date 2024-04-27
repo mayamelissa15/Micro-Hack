@@ -25,6 +25,7 @@ const App = () => {
     >
       <div className="w-full md:w-1/2 flex justify-center items-center">
         <div className="max-w-md mx-auto px-6 py-12">
+          {/* Utilisation d'une grille flex pour centrer le contenu */}
           {isSignUp ? <SignUp showSignIn={showSignIn} /> : <SignIn showSignUp={showSignUp} />}
         </div>
       </div>

@@ -32,11 +32,11 @@ const Dashboard = () => {
   const [completed,setcompleted]=useState(0)
   const [waiting,settwaiting]=useState(0)
   return (
-    <div className="bg-[#F6F5FB] flex basis ">
-        <div className="basis-2/12">
+    <div className="bg-[#F6F5FB] lg:flex basis ">
+        <div className="lg:basis-2/12">
             <Sidebar></Sidebar>
         </div>
-        <div className="basis-7/12 bg-slate-50">
+        <div className="lg:basis-7/12 bg-slate-50">
             <div className="mt-8">
            <Navbar></Navbar>
             </div>
@@ -72,7 +72,7 @@ const Dashboard = () => {
           </tbody>
         </table>
         </div>
-        <div className="basis-3/12 pt-4  bg-slate-50">
+        <div className="sm:mx-auto lg:basis-3/12 pt-4  bg-slate-50">
         <div>
         <div className="partone">
           <Cerclepercent />
