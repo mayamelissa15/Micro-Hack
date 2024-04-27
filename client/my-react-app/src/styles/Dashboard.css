@@ -1,100 +1,117 @@
-.Projectsat{
+.Projectsat {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     gap: 10%;
 }
-.Projectsat>.right,.Projectsat>.left{
+
+.Projectsat > .right, .Projectsat > .left {
+    flex-basis: 45%; /* Définir la largeur de chaque colonne */
     display: flex;
     flex-direction: column;
     gap: 20px;
-    
 }
-.Projectsat>.right>.total,.Projectsat>.right>.inprogress,.Projectsat>.left>.completed,.Projectsat>.left>.waiting{
-    display: flex;
-    flex-direction: column;
-}
-.Projectsat>.right>.total>div>div,.Projectsat>.right>.inprogress>div>div,.Projectsat>.left>.completed>div>div,.Projectsat>.left>.waiting>div>div{
+
+.Projectsat > .right > .total > div > div,
+.Projectsat > .right > .inprogress > div > div,
+.Projectsat > .left > .completed > div > div,
+.Projectsat > .left > .waiting > div > div {
     height: 20px;
-    display: flex;
     width: 7px;
     border-radius: 10px;
 }
-.Projectsat>.right>.total>div,.Projectsat>.right>.inprogress>div,.Projectsat>.left>.completed>div,.Projectsat>.left>.waiting>div{
+
+.Projectsat > .right > .total > div,
+.Projectsat > .right > .inprogress > div,
+.Projectsat > .left > .completed > div,
+.Projectsat > .left > .waiting > div {
     display: flex;
     flex-direction: row;
     gap: 10px;
     align-items: center;
 }
-.Projectsat>.right>.total>div>h2,.Projectsat>.right>.inprogress>div>h2,.Projectsat>.left>.completed>div>h2,.Projectsat>.left>.waiting>div>h2{
+
+.Projectsat > .right > .total > div > h2,
+.Projectsat > .right > .inprogress > div > h2,
+.Projectsat > .left > .completed > div > h2,
+.Projectsat > .left > .waiting > div > h2,
+.title {
     font-family: "Poppins", sans-serif;
-    font-weight: 500
+    font-weight: 500;
 }
-.title{
+
+.title {
     font-family: "Poppins", sans-serif;
-    font-weight: 400
+    font-weight: 400;
 }
-.maintitle{
+
+.maintitle {
     font-size: 18px;
     font-family: "Poppins", sans-serif;
-    font-weight: 400
+    font-weight: 400;
 }
-.inprogress{
+
+.inprogress {
     background-color: #FEECFF;
     padding: 20px;
     border-radius: 10px;
 }
-.total{
+
+.total {
     background-color: #ECF2FF;
     padding: 20px;
     border-radius: 10px;
 }
-.completed{
+
+.completed {
     background-color: #FFEEE0;
     padding: 20px;
     border-radius: 10px;
 }
-.waiting{
+
+.waiting {
     background-color: #F1ECFF;
     padding: 20px;
     border-radius: 10px;
 }
-.inprogress>div>div{
+
+.inprogress > div > div {
     background-color: #F939FF;
 }
-.total>div>div{
+
+.total > div > div {
     background-color: #085AFF;
 }
-.completed>div>div{
+
+.completed > div > div {
     background-color: #F07C10;
 }
-.waiting>div>div{
+
+.waiting > div > div {
     background-color: #7248E4;
 }
-.titleh2{
+
+.titleh2 {
     font-size: 18px;
     font-weight: 500;
     font-family: "Poppins", sans-serif;
 }
-.partone,.parttwo{
+
+.partone, .parttwo {
     margin-bottom: 20px;
     background-color: white;
     padding: 20px;
     border-radius: 10px;
-    width: 38%;
-    display: flex;
-    flex-direction: column;
     font-family: "Poppins", sans-serif;
-    
 }
-.partone>span,.parttwo>span{
+
+.partone > span, .parttwo > span {
     background-color: #dbdadf;
     height: 0.5px;
-    width: auto; 
+    width: auto;
     display: flex;
 }
-.parttwo>h2{
-    font-size:18px;
+
+.parttwo > h2 {
+    font-size: 18px;
     font-weight: 500;
-    
 }
