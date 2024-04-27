@@ -32,24 +32,22 @@ const Dashboard = () => {
   const [completed,setcompleted]=useState(0)
   const [waiting,settwaiting]=useState(0)
   return (
-    <div className="flex basis-1/4 bg-gray-100 min-h-screen">
-      
-      <div className="sidebar">
-        <Sidebar></Sidebar>
-      </div>
-
-      {/* Tableau de bord */}
-      <div className="basis-3/4 container ml-64  px-4 py-8">
-        <Navbar></Navbar>
-
-        <table className="mt-8 w-full bg-white shadow-md rounded-lg overflow-hidden">
+    <div className="bg-[#F6F5FB] flex basis ">
+        <div className="basis-2/12">
+            <Sidebar></Sidebar>
+        </div>
+        <div className="basis-7/12 bg-slate-50">
+            <div className="mt-8">
+           <Navbar></Navbar>
+            </div>
+            <table className="p-8 mx-auto my-auto bg-white shadow-md rounded-lg overflow-hidden">
           <thead className="">
             <tr>
-              <th className="text-md text-slate-700 py-4 px-3 text-left">ID</th>
-              <th className="text-md text-slate-700 py-4 px-3 text-left">Project Name</th>
-              <th className="text-md text-slate-700 py-4 px-3 text-left">Date of Creation</th>
-              <th className="text-md text-slate-700 py-4 px-3 text-left">Execution Time</th>
-              <th className="text-md text-slate-700 py-4 px-3 text-left">Actions</th>
+              <th className="text-sm text-black py-4 px-8 text-center">ID</th>
+              <th className="text-sm text-black py-4 px-8 text-center">Project Name</th>
+              <th className="text-sm text-black py-4 px-8 text-center">Date of Creation</th>
+              <th className="text-sm text-black py-4 px-8 text-center">Execution Time</th>
+              <th className="text-sm text-black py-4 px-8 text-center">Actions</th>
             </tr>
           </thead>
           <tbody>
@@ -73,6 +71,8 @@ const Dashboard = () => {
             {/* Ajoutez plus de lignes de données au besoin */}
           </tbody>
         </table>
+        </div>
+        <div className="basis-3/12 pt-4  bg-slate-50">
         <div>
         <div className="partone">
           <Cerclepercent />
@@ -125,7 +125,7 @@ const Dashboard = () => {
 
         </div>
         
-      </div>
+        </div>
     </div>
   );
 };

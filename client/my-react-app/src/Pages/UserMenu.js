@@ -10,7 +10,7 @@ const UserMenu = () => {
             <Sidebar></Sidebar>
         </div>
         <div className="basis-8/12 bg-slate-50">
-            <div className="m-16">
+            <div className="pl-8 m-16">
                
             <Tasks></Tasks>
             </div>
