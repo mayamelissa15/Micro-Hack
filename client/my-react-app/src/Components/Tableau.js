@@ -28,7 +28,7 @@ const Tableau = () => {
             <h1 className="mr-8 text-red-500 text-xl font-medium "> Busy </h1>
             <p className="lg:mx-12 py-1 font-medium text-black text-sm underline underline-offset-1">See all</p>
         </div> 
-             <Team></Team>
+             <Team ></Team>
              <Team></Team>
         </div>
         

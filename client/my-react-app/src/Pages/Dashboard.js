@@ -26,10 +26,10 @@ const Dashboard = () => {
     })
 
 }, [])
-  const [total,settotal]=useState(0)
-  const [inprog,setinprog]=useState(0)
-  const [completed,setcompleted]=useState(0)
-  const [waiting,settwaiting]=useState(0)
+  const [total,settotal]=useState(3)
+  const [inprog,setinprog]=useState(4)
+  const [completed,setcompleted]=useState(7)
+  const [waiting,settwaiting]=useState(1)
   return (
     <div className="bg-[#F6F5FB] lg:flex basis ">
         <div className="lg:basis-2/12">

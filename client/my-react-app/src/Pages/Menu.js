@@ -3,6 +3,8 @@ import Task from "../Components/TaskProgress";
 import React, { useState } from 'react'
 import '../styles/Menu.css'
 import Cerclepercent from "../Components/Cerclepercent";
+import axios from 'axios'
+import { useParams } from 'react-router-dom';
 
 import add from '../Assets/Add.png'
 import SearchBar from "../Components/SearchBar";
@@ -11,44 +13,45 @@ import TaskComplete from "../Components/TaskComplete";
 import TaskToDo from "../Components/TaskToDo";
 import Navbar from "../Components/Navbar";
 const Menu = () => {
+    const { id } = useParams();
     const [listTodo , setlistTodo]=useState([
       {
         'id':'1',
         "taskName": "Task 1",
         "time": "2 hours",
         "status": "In Progress",
-        "team": "Team A",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae urna vitae sapien convallis vulputate."
+        "team": "Team B",
+        "description": "ce task est tres important."
       },
       {
-        'id':'1',
+        'id':'5',
         "taskName": "Task 2",
         "time": "1 hour",
         "status": "Completed",
-        "team": "Team B",
-        "description": "Praesent vitae est nec enim condimentum facilisis in et nisl."
+        "team": "Team c",
+        "description": "Praesent vitae est nec  facilisis in et nisl."
       },
       {
-        'id':'1',
+        'id':'8',
         "taskName": "Task 3",
         "time": "3 hours",
         "status": "Pending",
         "team": "Team C",
-        "description": "Integer eget ex blandit, maximus lacus ut, convallis ex. Fusce ut magna ac felis blandit eleifend."
+        "description": "Integer eget ex blandit."
       }
     ]
     )
     const [listdone , setlistdone]=useState([
       {  
-        'id':'1',
+        'id':'4',
         "taskName": "Task 1",
         "time": "2 hours",
         "status": "In Progress",
-        "team": "Team A",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae urna vitae sapien convallis vulputate."
+        "team": "Team d",
+        "description": " consectetur adipiscing elit. Sed vitae urna vitae sapien convallis vulputate."
       },
       {
-        'id':'1',
+        'id':'17',
         "taskName": "Task 2",
         "time": "1 hour",
         "status": "Completed",
@@ -56,7 +59,7 @@ const Menu = () => {
         "description": "Praesent vitae est nec enim condimentum facilisis in et nisl."
       },
       {
-        'id':'1',
+        'id':'15',
         "taskName": "Task 3",
         "time": "3 hours",
         "status": "Pending",
@@ -67,7 +70,7 @@ const Menu = () => {
     )
     const [listinpogress, setlistinprogress]=useState([
       {
-        'id':'1',
+        'id':'10',
         "taskName": "Task 1",
         "time": "2 hours",
         "status": "In Progress",
@@ -75,7 +78,7 @@ const Menu = () => {
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae urna vitae sapien convallis vulputate."
       },
       {
-        'id':'1',
+        'id':'11',
         "taskName": "Task 2",
         "time": "1 hour",
         "status": "Completed",
@@ -83,7 +86,7 @@ const Menu = () => {
         "description": "Praesent vitae est nec enim condimentum facilisis in et nisl."
       },
       {
-        'id':'1',
+        'id':'12',
         "taskName": "Task 3",
         "time": "3 hours",
         "status": "Pending",
@@ -93,13 +96,25 @@ const Menu = () => {
     ]
     )
   
-    const [day,setday]=useState(0)
-    const [hour,sethour]=useState(0)
-    const [minutes,setminutes]=useState(0)
-    const [seconds,setseconds]=useState(0)
-    const [tasksdone,settasksdone]=useState(0)
-    const [tasksleft,settasksleft]=useState(0)
-    const [description,setdescription]=useState('')
+    const [day,setday]=useState(2)
+    const [hour,sethour]=useState(12)
+    const [minutes,setminutes]=useState(34)
+    const [seconds,setseconds]=useState(19)
+    const [tasksdone,settasksdone]=useState(10)
+    const [tasksleft,settasksleft]=useState(3)
+    const [description,setdescription]=useState('This captivating project combines technical expertise, interdisciplinary collaboration')
+    const handleOpen = () => {
+      const registerURL = `http://localhost:5000/get_project/${id}`;
+          axios.post(registerURL, {withCredentials:true})
+          .then(response => {
+              console.log('Enregistrement réussi :', response.data);
+              
+          })
+          .catch(error => {
+              console.error('Erreur lors de l\'enregistrement :', error);
+              console.error('Erreur lors de l\'enregistrement - Server Response:', error.response);
+          });
+          };
     
     return (
     <div className="bg-slate-50">

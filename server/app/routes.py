@@ -126,4 +126,3 @@ def update_task_status(task_id):
     db.session.commit()
     return jsonify({'message': 'Task status updated successfully'}), 200
 
-

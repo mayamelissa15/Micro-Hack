@@ -8,6 +8,7 @@ import User from './Components/User';
 import UserMenu from './Pages/UserMenu';
 import Terms from './Pages/Terms';
 function App() {
+  
   return (
     <Router>
       <div className="App">

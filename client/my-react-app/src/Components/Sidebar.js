@@ -5,23 +5,23 @@ import Addition from '../Assets/Addition.png';
 import Settings from '../Assets/settings.png';
 import padlock from '../Assets/padlock.png';
 import teams from '../Assets/team.png';
-import Terms from '../Pages/Terms';
-<<<<<<< Updated upstream
 
-=======
+
+
 import logo from '../Assets/logo.png'
->>>>>>> Stashed changes
+
 const Sidebar = () => {
   const style = {
     height: 80,
     width: 80,
+    
   };
   return (
     <div className="fixed left-0 top-0 h-full w-64 bg-white text-black flex flex-col justify-between rounded-4xl hidden lg:flex">
       {/* Utilisez la classe hidden lg:flex pour masquer la sidebar sur les petits écrans */}
       <div className="py-4 px-6">
-        <div style={style}><img src={logo}></img></div>
-        <ul className="m-2 p-4">
+        <div style={style} className='mx-16'><img src={logo}></img></div>
+        <ul className="mx-2 px-4">
 
           <li className="cursor-pointer flex items-center justify-around rounded transition-colors duration-300 bg-[#AA8CFF] text-white font-normal text-md text-center text-white rounded-xl p-2">
             <button><img src={add} className="justify-around" alt="Add" /></button>
