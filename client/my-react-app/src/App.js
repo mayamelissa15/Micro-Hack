@@ -6,7 +6,7 @@ import Dashboard from './Pages/Dashboard';
 import TeamLists from './Pages/TeamLists';
 import User from './Components/User';
 import UserMenu from './Pages/UserMenu';
-
+import Terms from './Pages/Terms';
 function App() {
   return (
     <Router>
@@ -18,6 +18,7 @@ function App() {
           <Route path="/" element={<Dashboard />} />
           <Route path="/Team-List" element={<TeamLists/>} />
           <Route path="/UserMenu" element={<UserMenu/>}></Route>
+          <Route path='/Terms' element={<Terms/>}></Route>
         </Routes>
       </div>
     </Router>
