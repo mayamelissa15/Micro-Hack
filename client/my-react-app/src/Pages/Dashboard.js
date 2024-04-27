@@ -2,10 +2,31 @@
 import React ,{useState} from "react";
 import Sidebar from "../Components/Sidebar";
 import Navbar from "../Components/Navbar";
+import {  useNavigate  } from 'react-router-dom';
 import Cerclepercent from "../Components/Cerclepercent";
 import '../styles/Dashboard.css'
 
+
 const Dashboard = () => {
+  const navigate = useNavigate();
+  const handleProjectClick = (id) => {
+    navigate(`/Project/${id}`);
+  };
+  const data = [
+    {
+      id: 1,
+      projectName: "Project 1",
+      dateOfCreation: "2024-04-26",
+      executionTime: "5s"
+    },
+    {
+      id: 2,
+      projectName: "Project 2",
+      dateOfCreation: "2024-04-25",
+      executionTime: "10s"
+    },
+    
+  ];
   const [total,settotal]=useState(0)
   const [inprog,setinprog]=useState(0)
   const [completed,setcompleted]=useState(0)
@@ -31,28 +52,22 @@ const Dashboard = () => {
           </thead>
           <tbody>
             {/* Lignes de données ici */}
-            <tr>
-              <td className="py-2 px-3">1</td>
-              <td className="py-2 px-3">Project 1</td>
-              <td className="py-2 px-3">2024-04-26</td>
+                  {data.map((item, index) => (
+            <tr key={index}>
+              <td className="py-2 px-3">{item.id}</td>
+              <td className="py-2 px-3" onClick={() => handleProjectClick(item.id)}>{item.projectName}</td>
+              <td className="py-2 px-3">{item.dateOfCreation}</td>
               <td className="py-2 px-3">
-                <button className="bg-slate-100 text-slate-500 test-sm font-normal rounded-2xl py-1 px-4">Optimiser</button>
+                <button className="bg-green-100 text-green-500 text-md font-medium rounded-2xl py-1 px-4">{item.executionTime}</button>
               </td>
               <td className="py-2 px-3">
-                <button className="text-green-500 underline underline-offset-1 font-normal m-2">Edit</button>
-                <button className="text-red-500 underline underline-offset-1 font-normal m-2">Delete</button>
-              </td>
-            </tr>
-            <tr>
-              <td className="py-2 px-3">2</td>
-              <td className="py-2 px-3">Project 2</td>
-              <td className="py-2 px-3">2024-04-25</td>
-              <td className="py-2 px-3"><button className="bg-slate-100 text-slate-500 test-sm font-normal rounded-2xl py-1 px-4">Optimiser</button></td>
-              <td className="py-2 px-3">
-                <button className="text-green-500 underline underline-offset-1 font-normal m-2">Edit</button>
-                <button className="text-red-500 underline underline-offset-1 font-normal m-2">Delete</button>
+                {/* Ajoutez les actions en fonction de vos besoins */}
+                <button className="text-green-500 underline underline-offset-1 font-medium m-2" >Edit</button>
+                <button className="text-red-500 underline underline-offset-1 font-medium m-2">Delete</button>
               </td>
             </tr>
+          ))}
+            
             {/* Ajoutez plus de lignes de données au besoin */}
           </tbody>
         </table>
